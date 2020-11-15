@@ -170,16 +170,5 @@ def single_predict(model, X):
     return labels[predicted.item()]
 
 if __name__ == "__main__":
-    # run()
-    X = [5.1,3.8,1.9,0.4]
-    mean_X = [5.84333333, 3.054, 3.75866667, 1.19866667] 
-    sigma = [0.82530129, 0.43214658, 1.75852918, 0.76061262]
-    for i in range(len(X)):
-        X[i] = (X[i]- mean_X[i]) / sigma[i]
-    print(X)
-    model = Model()
-    model.load_state_dict(torch.load('models/model_v1'))
-    model.eval()
-    predicted = test(model, X)
-    print(labels[predicted.item()])
+    run()
 
