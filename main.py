@@ -1,7 +1,7 @@
 import numpy as np
-import pandas as pd
-from sklearn.preprocessing import LabelBinarizer
-from sklearn.preprocessing import MinMaxScaler
+# import pandas as pd
+# from sklearn.preprocessing import LabelBinarizer
+# from sklearn.preprocessing import MinMaxScaler
 
 import torch
 import torch.nn as nn
@@ -9,9 +9,8 @@ import torch.nn.functional as F
 import torch.utils.data
 from torch.autograd import Variable
 
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split
 
-import matplotlib.pyplot as plt
 
 
 labels = {0: 'setosa', 1: 'versicolor', 2: 'virginica'}
@@ -115,6 +114,7 @@ def read_data():
     # Scale the data
     scaler = MinMaxScaler()
     scaled_X = scaler.fit_transform(X)
+
     return scaled_X, y
 
 
